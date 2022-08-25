@@ -1,3 +1,10 @@
+AttestD Repository Mirror Action
+--------------------------------------------------------------------------------
+
+This repository is a fork of yesolutions/mirror-action to ensure that the
+AttestD organization has control over this code that has access to
+sensitive code.
+
 # mirror-action
 A GitHub Action for mirroring your commits to a different remote repository
 
