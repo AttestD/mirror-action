@@ -48,7 +48,7 @@ if [[ "${GIT_SSH_PRIVATE_KEY}" != "" ]]; then
     if [[ "${GIT_SSH_KNOWN_HOSTS}" != "" ]]; then
       echo "${GIT_SSH_KNOWN_HOSTS}" > ~/.ssh/known_hosts
       ssh-keyscan -t rsa gitlab.ci.attestd.dev
-      git config --global core.sshCommand "ssh -i ~/.ssh/id_rsa -o IdentitiesOnly=yes -o UserKnownHostsFile=~/.ssh/known_hosts"
+      git config --global core.sshCommand "ssh -v -i ~/.ssh/id_rsa -o IdentitiesOnly=yes -o UserKnownHostsFile=~/.ssh/known_hosts"
     else
       if [[ "${GIT_SSH_NO_VERIFY_HOST}" != "true" ]]; then
         echo "WARNING: no known_hosts set and host verification is enabled (the default)"
